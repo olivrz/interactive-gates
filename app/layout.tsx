@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GlobalNav from "../components/global-nav"
+import {GlobalNav} from "../components/global-nav"
+import "./globals.css"
+import tutorialData from "../content/tutorials/tutorialcontent.json"
 
 export const metadata: Metadata = {
   title: 'React Gates',
@@ -14,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GlobalNav />
+        <GlobalNav tutorialData={tutorialData.tutorials}/>
         {children}
       </body>
     </html>

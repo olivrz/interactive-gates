@@ -1,0 +1,44 @@
+{
+  "tutorials": [
+    {
+      "title": "Basic Logic Gates",
+      "author": "Oliver Rzepecki",
+      "path": "/tutorials/basic-logic-gates",
+      "contentList": [
+        {
+          "type": "paragraph",
+          "content": "The foundational logic gates are the AND, OR, NOT, NAND, NOR, XOR, and XNOR gates. While AND and OR gates are very commonly used, the NAND and NOR gates are considered universal logic gates due to the fact that any digital circuit can be implemented using only either one of them."
+        },
+        {
+          "type": "subheading",
+          "content": "AND Gate"
+        },
+        {
+          "type": "paragraph",
+          "content": "The AND gate only outputs a signal when both of its inputs are active. "
+        },
+        {
+          "type": "image",
+          "alt": "Truth Table for AND Gate",
+          "title": "Truth Table for AND Gate",
+          "src": "TODO",
+          "width": "",
+          "height": ""
+        },
+        {
+          "type": "interactivegate",
+          "numInputs": [2,8],
+          "title": "Interactive AND Gate"
+        }
+      ]
+    },
+    {
+      "title": "Sequential Logic Gates",
+      "path": "/tutorials/sequential-logic-gates"
+    },
+    {
+      "title": "4-bit Binary Adder",
+      "path": "/tutorials/binary-adder-logic-gates"
+    }
+  ]
+}

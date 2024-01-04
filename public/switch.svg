@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Ñëîé_1" data-name="Ñëîé 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 163.13 235.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient-4);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="81.57" y1="71.26" x2="81.57" y2="238.84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e8e8e8"/>
+      <stop offset=".22" stop-color="#e3e3e3"/>
+      <stop offset=".48" stop-color="#d5d5d5"/>
+      <stop offset=".76" stop-color="#bdbdbd"/>
+      <stop offset=".82" stop-color="#b8b8b8"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="81.57" cy="153.88" fx="81.57" fy="153.88" r="64.69" gradientTransform="translate(233.34 68.45) rotate(88.55)" gradientUnits="userSpaceOnUse">
+      <stop offset=".9" stop-color="#26c4ff"/>
+      <stop offset="1" stop-color="#008ec4"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="81.57" cy="149.76" fx="81.57" fy="149.76" r="64.51" gradientTransform="translate(217.34 44.8) rotate(79.15)" gradientUnits="userSpaceOnUse">
+      <stop offset=".18" stop-color="#ededed"/>
+      <stop offset=".33" stop-color="#e8e8e8"/>
+      <stop offset=".49" stop-color="#dadada"/>
+      <stop offset=".67" stop-color="#c2c2c2"/>
+      <stop offset=".86" stop-color="#a2a2a2"/>
+      <stop offset="1" stop-color="#858585"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="184.09" cy="250.07" fx="184.09" fy="250.07" r="96.23" gradientTransform="translate(-18.47 47.24) scale(.54 .39)" gradientUnits="userSpaceOnUse">
+      <stop offset=".08" stop-color="#5c5c5c"/>
+      <stop offset=".8" stop-color="#606060"/>
+      <stop offset=".82" stop-color="#616161"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="80.84" cy="12.12" fx="80.84" fy="12.12" r="133.7" gradientTransform="translate(0 3.05) scale(1 .98)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#919191"/>
+    </radialGradient>
+  </defs>
+  <circle class="cls-4" cx="81.57" cy="153.88" r="81.07"/>
+  <circle class="cls-2" cx="81.57" cy="153.88" r="64.69" transform="translate(-74.33 231.53) rotate(-88.55)"/>
+  <circle class="cls-5" cx="81.57" cy="153.88" r="54.29" transform="translate(-84.92 205.02) rotate(-79.15)"/>
+  <path class="cls-3" d="m105.1,127.06c0,9.37-10.54,16.96-23.53,16.96s-23.53-7.59-23.53-16.96,10.54-16.96,23.53-16.96,23.53,7.6,23.53,16.96Z"/>
+  <path class="cls-1" d="m116.2,34.38C117.39,15.69,100.66.5,81.57.5s-35.82,15.19-34.64,33.88c1.42,22.48,8.71,67.02,11.05,89.42,1.24,11.89,11.18,18.88,23.59,18.88s22.35-7,23.59-18.89c2.34-22.4,9.63-66.94,11.05-89.42Z"/>
+</svg>
