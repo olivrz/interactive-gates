@@ -3,7 +3,7 @@ import Image from "next/image";
 import {useState} from "react";
 
 
-export default function Switch() {
+export default function Switch({index} : {index: number}) {
     const [isActive, setIsActive] = useState(false)
 
     const onSwitchClick = () => {

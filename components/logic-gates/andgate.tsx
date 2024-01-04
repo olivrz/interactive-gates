@@ -1,16 +1,16 @@
 'use client'
 import Image from "next/image";
-import Switch from "./switch"
+import Switch from "../switch"
 import {useState} from "react";
-
-type inputState = {
-    [key: string]: boolean;
-}
+import {useAppDispatch, useAppSelector} from "../../lib/hooks";
+import { selectLogicState } from "../../lib/features/logic-gates/basicSlice";
 
 
-export function AndGate( {numInputs}: { numInputs: number }) {
+export function AndGate() {
 
-    const [inputStates, setInputStates] = useState(new Array(numInputs).fill(false))
+    const dispatch = useAppDispatch();
+
+    const logicState = useAppSelector(selectLogicState);
 
     return (
         <div
@@ -20,7 +20,7 @@ export function AndGate( {numInputs}: { numInputs: number }) {
             <div
                 className="flex flex-col justify-between h-20 md:h-32"
             >
-                <Switch />
+                <Switch index={0}/>
                 <Switch />
                 <Switch />
             </div>
