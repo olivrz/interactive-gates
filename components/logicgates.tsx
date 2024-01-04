@@ -1,13 +1,16 @@
+'use client'
 import Image from "next/image";
 import Switch from "./switch"
+import {useState} from "react";
 
 type inputState = {
     [key: string]: boolean;
 }
 
 
-export function AndGate() {
+export function AndGate( {numInputs}: { numInputs: number }) {
 
+    const [inputStates, setInputStates] = useState(new Array(numInputs).fill(false))
 
     return (
         <div
@@ -19,13 +22,21 @@ export function AndGate() {
             >
                 <Switch />
                 <Switch />
+                <Switch />
             </div>
 
             {/** INPUT WIRES */}
-            <div
+            {/**<div
                 className="border-solid border-gray-300 border-t-4 border-b-4
                 h-16 w-16 md:w-24 md:h-24"
-            />
+            />*/}
+            {<div
+                className="flex flex-col justify-between h-16 w-fit md:h-32"
+            >
+                <div className="w-16 my-4 border-t-4 md:w-24"/>
+                <div className="w-16 my-4 border-t-4 md:w-24"/>
+                <div className="w-16 my-4 border-t-4 md:w-24"/>
+            </div>}
 
             {/** GATE */}
             <div

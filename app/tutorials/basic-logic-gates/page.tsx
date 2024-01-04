@@ -1,6 +1,11 @@
+'use client'
 import {AndGate} from "../../../components/logicgates";
+import {useState} from "react";
 
 export default function Page() {
+
+    const [numAndInputs, setNumAndInputs] = useState(2);
+
     return (
         <div className="mx-44 mt-8 h-screen">
             <div className="flex flex-col h-full">
@@ -9,7 +14,7 @@ export default function Page() {
                 <br/>
                 <h3 className="">By Oliver Rzepecki</h3>
                 {/**TODO Add social media link */}
-                <AndGate />
+                <AndGate numInputs={numAndInputs}/>
             </div>
         </div>
     )
