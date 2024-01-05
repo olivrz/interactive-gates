@@ -1,7 +1,7 @@
 'use client'
 import {AndGate} from "../../../components/logic-gates/andgate";
-import {useState} from "react";
 import StoreProvider from "../../StoreProvider"
+import {OrGate} from "../../../components/logic-gates/orgate"
 
 export default function Page() {
 
@@ -16,6 +16,7 @@ export default function Page() {
                     <h3 className="">By Oliver Rzepecki</h3>
                     {/**TODO Add social media link */}
                     <AndGate />
+                    <OrGate />
                 </div>
             </div>
         </StoreProvider>

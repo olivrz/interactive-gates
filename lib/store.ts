@@ -1,8 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
+import andReducer from "./features/logic-gates/andSlice"
+import orReducer from "./features/logic-gates/orSlice"
 
 export const makeStore = () => {
     return configureStore({
-        reducer: {}
+        reducer: {
+            andGate: andReducer,
+            orGate: orReducer
+        }
     })
 }
 
