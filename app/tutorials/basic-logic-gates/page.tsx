@@ -15,8 +15,8 @@ export default function Page() {
                     <br/>
                     <h3 className="">By Oliver Rzepecki</h3>
                     {/**TODO Add social media link */}
-                    <AndGate />
-                    <OrGate />
+                    <AndGate gateIndex={0}/>
+                    <OrGate gateIndex={1}/>
                 </div>
             </div>
         </StoreProvider>

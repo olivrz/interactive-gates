@@ -1,12 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import andReducer from "./features/logic-gates/andSlice"
-import orReducer from "./features/logic-gates/orSlice"
+import { configureStore } from '@reduxjs/toolkit';
+import basicGatesReducer from "./features/logic-gates/basicGatesSlice";
 
 export const makeStore = () => {
     return configureStore({
         reducer: {
-            andGate: andReducer,
-            orGate: orReducer
+            basicGates: basicGatesReducer
         }
     })
 }

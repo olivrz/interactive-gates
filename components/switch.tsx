@@ -1,20 +1,23 @@
 'use client'
 import Image from "next/image";
-import {useState} from "react";
-import {updateSwitchActive} from "../lib/features/logic-gates/andSlice";
+import {updateSwitchActive} from "../lib/features/logic-gates/basicGatesSlice";
 import {useAppDispatch, useAppSelector} from "../lib/hooks";
 import type {RootState} from "../lib/store";
 
+interface switchPropTypes {
+    gateIndex: number,
+    index: number
+}
 
-export default function Switch({index} : {index: number}) {
+export default function Switch({gateIndex, index} : switchPropTypes) {
 
-    const selectValueByIndex = (state: RootState): boolean => state.andGate.values?.[index];
+    const selectValueByIndex = (state: RootState): boolean => state.basicGates[gateIndex].values?.[index];
 
     const dispatch = useAppDispatch();
     const isActive = useAppSelector(selectValueByIndex);
 
     const onSwitchClick = () => {
-        dispatch(updateSwitchActive({index: index}));
+        dispatch(updateSwitchActive({gateIndex: gateIndex, index: index}));
     }
 
     return (

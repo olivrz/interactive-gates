@@ -1,26 +1,27 @@
 'use client'
 import Switch from "../switch"
 import React, {useEffect} from "react";
-import {useAppDispatch, useAppSelector} from "../../lib/hooks";
-import {updateNumSwitches, addGateInput} from "../../lib/features/logic-gates/basicGatesSlice";
-import type {inputStateType} from "../../lib/features/logic-gates/basicGatesSlice";
-import {RootState} from "../../lib/store";
+import { useAppDispatch, useAppSelector } from "../../lib/hooks";
+import {addGateInput, inputStateType, updateNumSwitches} from "../../lib/features/logic-gates/basicGatesSlice";
+import type {RootState} from "../../lib/store";
 
-export function AndGate({gateIndex} : {gateIndex: number}) {
+export function OrGate({gateIndex} : {gateIndex: number}) {
 
     const dispatch = useAppDispatch();
 
     useEffect(()=> {
         // initialize redux slice for this gate
         const initialState : inputStateType = {
-            "gateType": "and",
+            "gateType": "or",
             "gateIndex": gateIndex,
             "values": [false, false],
             "numInputs": 2
         };
         dispatch(addGateInput({gateIndex: gateIndex, newInputState: initialState}));
     }, []);
+
     const basicGate = useAppSelector((state: RootState) => state.basicGates[gateIndex]);
+
     if (!basicGate) {
         // Render loading or placeholder content while waiting for the state to initialize
         return <div>Loading...</div>;
@@ -28,7 +29,7 @@ export function AndGate({gateIndex} : {gateIndex: number}) {
 
     const numInputs = basicGate.numInputs;
     const values = basicGate.values;
-    const outputIsActive = values.filter( val => val === false).length <= 0;
+    const outputIsActive = values.filter( val => val === true).length >= 1;
 
     const handleNumInputsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(updateNumSwitches({gateIndex: gateIndex, numInputs: event.target.value}));
@@ -42,7 +43,7 @@ export function AndGate({gateIndex} : {gateIndex: number}) {
                 <input type="number" id="number-input"
                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                        defaultValue="2" required
-                    min="2" max="8" onChange={handleNumInputsChange}
+                       min="2" max="8" onChange={handleNumInputsChange}
                 />
             </form>
             <div
